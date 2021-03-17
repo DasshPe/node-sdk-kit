@@ -70,7 +70,7 @@ exports.homeContent = (req, res) => {
     res.write('<tr>');
     res.write('<td class="labelfont">AMOUNT: </td>');
     res.write('<td class="form-control">');
-    res.write('<input type="text" name="AMOUNT" class="signuptextfield" value="1"  autocomplete="off"/>');
+    res.write('<input type="text" name="AMOUNT" class="signuptextfield" value="100"  autocomplete="off"/>');
     res.write('</td>');
     res.write('</tr>');
     res.write('<tr>');
@@ -136,7 +136,7 @@ exports.homeContent = (req, res) => {
     res.write('<tr>');
     res.write('<td class="labelfont">RETURN URL: </td>');
     res.write('<td class="form-control">');
-    res.write('<input type="text" name="RETURN_URL" class="signuptextfield" value="" autocomplete="off"  readonly="" />');
+    res.write('<input type="text" name="RETURN_URL" class="signuptextfield" value="http://localhost:8080/crm/jsp/response.jsp" autocomplete="off"  readonly="" />');
     res.write('</td>');
     res.write('</tr>');
     res.write('<tr>');
@@ -183,6 +183,7 @@ exports.redirectContent = (req, res) => {
                         CUST_SHIP_COUNTRY: 'India',
                         CUST_SHIP_STREET_ADDRESS1: 'C-94, Saraswati Kunj',
                         CUST_SHIP_ZIP: '122002',
+                        MERCHANT_PAYMENT_TYPE: result.MERCHANT_PAYMENT_TYPE,
                         ORDER_ID: result.ORDER_ID,
                         PAY_ID: config.dasshpe_payid,
                         PRODUCT_DESC: result.PRODUCT_DESC,
